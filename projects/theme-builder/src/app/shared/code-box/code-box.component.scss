@@ -1,0 +1,53 @@
+.code-box {
+  position: relative;
+  border: 1px black solid;
+  margin: 5px;
+}
+
+.code-actions {
+  padding-left: 5px;
+}
+
+.bg-white {
+  background-color: white;
+  margin: 5px;
+  padding: 0 5px;
+  border-radius: 6px;
+}
+
+.color-section {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  padding: 5px;
+  background-color: white;
+  border-radius: 10px;
+
+  .color{
+    width: 45px;
+    height: 45px;
+    margin: 0 5px;
+    border-radius: 50%;
+    border: solid 1px #c6c6c6;
+  }
+
+  .title{
+    font-size: 12px;
+    line-height: 2.08;
+    color: #a9abb7;
+  }
+
+  .color-input {
+    width: 100px;
+    height: 16px;
+    font-size: 12px;
+    color: #333333;
+  }
+}
+
+
+.code-example {
+  padding: 5px;
+}

@@ -1,0 +1,59 @@
+$sectionPalette: (
+  textTitleColor: var(--highlight),
+  textContentColor: var(--white),
+);
+
+#section {
+  $textTitleColor: map-get($sectionPalette, textTitleColor);
+  $textContentColor: map-get($sectionPalette, textContentColor);
+
+  .section {
+    img {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+    }
+  }
+  .title {
+    color: $textTitleColor;
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+
+  .subtitle {
+    font-weight: 500;
+    line-height: 1.79;
+    color: $textTitleColor;
+    margin-bottom: 15px;
+
+    &.left {
+      text-align: left;
+    }
+    &.center {
+      text-align: center;
+    }
+  }
+  .footer {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 25px;
+    color: $textTitleColor;
+    margin-bottom: 15px;
+
+    &.left {
+      text-align: left;
+    }
+    &.center {
+      text-align: center;
+    }
+  }
+
+  .content {
+    color: $textContentColor;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.79;
+    margin: 10px 0;
+  }
+}

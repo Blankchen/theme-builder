@@ -1,0 +1,12 @@
+/**
+  * make sure place these css file after theme variable
+  * component variable configurations 
+  */
+@import './theme/main';
+@import './theme/card';
+@import './theme/faq';
+@import './theme/section';
+@import './theme/step';
+@import './theme/table';
+@import './theme/info-page';
+@import './theme/count-down';

@@ -1,0 +1,49 @@
+<div class="code-box">
+  <h2 class="bg-white">{{ customProperties.title }}</h2>
+
+  <div class="code-actions">
+    <button (click)="openCode()" nz-button nzType="default" nzShape="circle">
+      <i nz-icon nzType="code"></i>
+    </button>
+  </div>
+
+  <ng-container *ngFor="let key of customProperties.propertiesKeyList">
+    <div
+      *ngIf="customProperties.propertiesObj[key] as value"
+      class="color-section"
+    >
+      <div
+        class="color"
+        [style.background]="value"
+      ></div>
+      <div class="">
+        <div class="title">{{ key }}</div>
+        <input
+          class="color-input"
+          [colorPicker]="value"
+          cpPosition="bottom"
+          [value]="value"
+          (colorPickerChange)="updateOne(key, $event)"
+        />
+      </div>
+    </div>
+  </ng-container>
+
+  <div class="code-example">
+    <ng-content></ng-content>
+  </div>
+</div>
+
+<nz-drawer
+  [nzVisible]="visible"
+  nzPlacement="top"
+  [nzHeight]="500"
+  nzTitle="Code example"
+  (nzOnClose)="visible = false"
+>
+  <div>Path: {{ customProperties.path }}</div>
+  <app-highlight
+    *ngIf="customProperties.code"
+    [code]="customProperties.code"
+  ></app-highlight>
+</nz-drawer>

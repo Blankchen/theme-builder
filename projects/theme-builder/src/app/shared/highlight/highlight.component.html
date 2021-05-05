@@ -1,0 +1,7 @@
+<button nz-button nzType="primary" (click)="isShowCode = !isShowCode">
+  <i nz-icon nzType="code" nzTheme="outline"></i>
+  {{ btnText }}
+</button>
+<pre
+  [hidden]="!isShow"
+><code [ngClass]="languageClass" [innerHTML]="htmlCode"></code></pre>

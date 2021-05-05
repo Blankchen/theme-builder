@@ -1,0 +1,13 @@
+$faqPalette: (
+  textColor: var(--highlight),
+);
+
+#faq {
+  $textTitleColor: map-get($faqPalette, textColor);
+
+  .title {
+    font-weight: 500;
+    line-height: 1.79;
+    color: $textTitleColor;
+  }
+}

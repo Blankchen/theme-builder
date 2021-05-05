@@ -1,0 +1,116 @@
+<app-theme-header [storage]="storage"></app-theme-header>
+
+<app-code-box [customProperties]="root">
+  <app-code-box [(customProperties)]="app">
+    <div class="app">
+      <app-code-box id="card" [customProperties]="card">
+        <div class="card">
+          <div class="cardTitle">
+            card title
+          </div>
+          <div class="cardBody">card body</div>
+        </div>
+      </app-code-box>
+
+      <app-code-box id="section" [customProperties]="section">
+        <div class="section">
+          <div class="title">title</div>
+          <p class="css.subtitle">
+            subtitle
+          </p>
+          <div class="content">content</div>
+          <div class="footer">footer</div>
+        </div>
+      </app-code-box>
+
+      <app-code-box id="step" [customProperties]="step">
+        <div>
+          <div class="topTitle h1">h1</div>
+          <div class="topTitle h2">h2</div>
+          <div class="topTitle h3">h3</div>
+          <div class="header">header title</div>
+          <div class="stepContainer">
+            <div class="step">
+              <a class="stepLink">
+                <img
+                  class="stepicon"
+                  src="/assets/images/ld-promotion/rule/step/step-1-en.png"
+                  alt=""
+                />
+                <div class="steptitle">title</div>
+              </a>
+              <div class="stepcontent">
+                content
+              </div>
+            </div>
+          </div>
+        </div>
+      </app-code-box>
+
+      <app-code-box id="countDown" [customProperties]="countDown">
+        <div class="count-container">
+          <div class="countDown">
+            <div class="title">Final</div>
+            <div class="remain">3</div>
+            <div class="subtitle">Days</div>
+            <div class="content">
+              content
+            </div>
+          </div>
+        </div>
+      </app-code-box>
+
+      <app-code-box id="faq" [customProperties]="faq">
+        <section class="faq">
+          <h3 class="title">title</h3>
+        </section>
+      </app-code-box>
+
+      <app-code-box id="table" [customProperties]="table">
+        <div class="tableContainer">
+          <table class="table tableHighlight tableAuto autoNewline">
+            <thead class="header">
+              <tr>
+                <th>Header</th>
+                <th>Header</th>
+              </tr>
+            </thead>
+            <tbody class="body">
+              <tr
+                class="tr ${isHighlight(`${rowIndex}`) ? css.highlight : null}"
+              >
+                <td class="td">
+                  td
+                </td>
+                <td class="td highlight">
+                  td
+                </td>
+              </tr>
+              <tr class="tr highlight">
+                <td class="td">
+                  td
+                </td>
+                <td class="td">
+                  td
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </app-code-box>
+    </div>
+  </app-code-box>
+
+  <app-code-box id="infoPage" [customProperties]="infoPage">
+    <div class="bg">
+      <div class="textSection">
+        <img
+          class="textLogo"
+          src="assets/images/ld-promotion/info-page/l-devent-logo.png"
+          alt="text logo"
+        />
+        <div>info</div>
+      </div>
+    </div>
+  </app-code-box>
+</app-code-box>

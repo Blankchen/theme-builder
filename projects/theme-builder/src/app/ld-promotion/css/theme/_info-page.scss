@@ -1,0 +1,71 @@
+$infoPagePalette: (
+  textColor: var(--white),
+  textShadow: 1px 1px 2px rgba(var(--white), 0.9),
+  background: (
+    desktop: (
+      url("/assets/images/ld-promotion/info-page/bg-top.png") left top no-repeat,
+      url("/assets/images/ld-promotion/info-page/bg-bottom.png") right bottom
+        no-repeat,
+      url("/assets/images/ld-promotion/info-page/page-bg.png") center top
+        no-repeat,
+      var(--background),
+    ),
+    mobile: (
+      url("/assets/images/ld-promotion/info-page/bg-top-s.png") left top
+        no-repeat,
+      url("/assets/images/ld-promotion/info-page/bg-bottom-s.png") right bottom
+        no-repeat,
+      url("/assets/images/ld-promotion/info-page/page-bg.png") center top/cover
+        no-repeat,
+      var(--background),
+    ),
+  ),
+);
+
+#infoPage {
+  $background: map-get($infoPagePalette, background);
+  $textColor: map-get($infoPagePalette, textColor);
+  $textShadow: map-get($infoPagePalette, textShadow);
+
+  .bg {
+    position: relative;
+    height: 1900px;
+    background: map-get($background, desktop);
+
+    @include breakpoint("max", "lg") {
+      background: map-get($background, mobile);
+    }
+
+    @include breakpoint("between", "md", "lg") {
+      background-size: 70%;
+    }
+  }
+
+  .textSection {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 1.4;
+    letter-spacing: 1.4px;
+    text-align: center;
+    color: $textColor;
+    text-shadow: $textShadow;
+
+    @include breakpoint("max", "md") {
+      font-size: 14px;
+    }
+
+    .textLogo {
+      margin-bottom: 20px;
+
+      @include breakpoint("max", "md") {
+        margin-bottom: 10px;
+        width: 200px;
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "files": [],
+  "references": [
+    {
+      "path": "./tsconfig.app.json"
+    },
+    {
+      "path": "./projects/theme-builder/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/theme-builder/tsconfig.spec.json"
+    },
+    {
+      "path": "./tsconfig.server.json"
+    }
+  ]
+}

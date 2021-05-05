@@ -1,0 +1,44 @@
+.bootstrap-app {
+  padding: 24px;
+}
+
+.progress {
+  margin-top: 1rem;
+}
+// fixed form feedback not show
+.is-invalid~.invalid-feedback, .is-invalid~.invalid-tooltip, .was-validated :invalid~.invalid-feedback, .was-validated :invalid~.invalid-tooltip {
+  display: block;
+}
+// Bootstrap 4 version 4.5.2
+// ### Sass options
+// https://getbootstrap.com/docs/4.5/getting-started/theming/#sass-options
+// https://github.com/twbs/bootstrap/blob/main/scss/_variables.scss
+
+// override bootstrap functions to comply with --vars
+// @import "./scss/functions-override";
+
+.dark-theme {
+  .bootstrap-app {
+    background-color: #1a1a1a;
+  }
+  // mixins first
+  @import "./scss/mixins";
+
+  @import "./theme/dark";
+
+  // Import Bootstrap source files
+  @import "./theme/base-bootstrap";
+}
+
+.light-theme {
+  .bootstrap-app {
+    background-color: white;
+  }
+  // mixins first
+  @import "./scss/mixins";
+
+  @import "./theme/light";
+
+  // Import Bootstrap source files
+  @import "./theme/base-bootstrap";
+}

@@ -1,0 +1,211 @@
+$tablePalette: (
+  backgroundColor: map-get($main, background),
+  tdBorderStyle: solid 1px var(--highlight),
+  headerColor: var(--dark-red),
+  textColor: var(--highlight),
+  highlightBackgroundColor: rgba(var(--highlightBackgroundColor), 0.3),
+);
+
+#table {
+  $borderRadius: 6px;
+  $backgroundColor: map-get($tablePalette, backgroundColor);
+  $tdBorderStyle: map-get($tablePalette, tdBorderStyle);
+  $thBorderStyle: $tdBorderStyle;
+  $headerColor: map-get($tablePalette, headerColor);
+  $textColor: map-get($tablePalette, textColor);
+  $highlightBackgroundColor: map-get($tablePalette, highlightBackgroundColor);
+
+  @mixin iconLeft($margin-bottom, $width, $height, $image) {
+    content: "";
+    display: inline-block;
+    margin-right: 5px;
+    margin-bottom: $margin-bottom;
+    width: $width;
+    height: $height;
+    background-image: url("/assets/images/ld-promotion/rule/#{$image}");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .tableContainer {
+    display: flex;
+    margin-left: -5%;
+    margin-right: -5%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .table {
+    margin: 0 auto;
+    border-radius: 6px;
+    background-color: $backgroundColor;
+    white-space: nowrap;
+    // width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    table-layout: fixed;
+
+    &.tableAuto {
+      table-layout: auto;
+    }
+
+    &.autoNewline {
+      .body span {
+        display: block;
+        white-space: initial;
+      }
+    }
+
+    @include breakpoint("max", "sm") {
+      table-layout: auto;
+    }
+
+    th,
+    td {
+      border-bottom: $tdBorderStyle;
+      padding: 10px 12px;
+
+      @include breakpoint("max", "sm") {
+        padding: 10px 5px;
+      }
+
+      &:first-child {
+        border-left: $tdBorderStyle;
+      }
+
+      &:last-child {
+        border-right: $tdBorderStyle;
+      }
+    }
+
+    * {
+      font-size: 16px;
+      font-weight: 600;
+      text-align: center;
+
+      @include breakpoint("max", "md") {
+        font-size: 12px;
+      }
+    }
+
+    .header,
+    .body {
+      width: 100%;
+    }
+
+    .header {
+      background-image: linear-gradient(to bottom, #f0c255, var(--highlight));
+
+      th {
+        border-top: $thBorderStyle;
+        color: $headerColor;
+        // hide br for desktop
+        @include breakpoint("min", "sm") {
+          :global(br) {
+            display: none;
+          }
+        }
+        // make top 2 span new line only on desktop
+        span {
+          display: block;
+          @include breakpoint("max", "sm") {
+            &:nth-child(-n + 2) {
+              display: inline;
+            }
+          }
+        }
+        // make header top 2 span with different size
+        &:not(:first-child) span {
+          &:nth-child(3) {
+            margin-top: 5px;
+          }
+
+          &:nth-child(n + 3) {
+            font-size: 12px;
+            font-weight: normal;
+            font-style: italic;
+            line-height: 1.17;
+          }
+        }
+      }
+      th:first-child {
+        border-top-left-radius: $borderRadius;
+      }
+
+      th:last-child {
+        border-top-right-radius: $borderRadius;
+      }
+    }
+
+    .body {
+      td {
+        color: $textColor;
+      }
+
+      .tr:last-child {
+        td:first-child {
+          border-bottom-left-radius: $borderRadius;
+        }
+
+        td:last-child {
+          border-bottom-right-radius: $borderRadius;
+        }
+      }
+
+      @include breakpoint("max", "lg") {
+        span {
+          display: block;
+        }
+      }
+    }
+
+    .highlight {
+      $this: &;
+      background-color: $highlightBackgroundColor;
+
+      td {
+        &:first-child::before {
+          @include iconLeft(-7px, 24px, 24px, "reward.png");
+        }
+
+        @include breakpoint("min", "md") {
+          &:not(:first-child)::before {
+            @include iconLeft(-2px, 15px, 15px, "check.png");
+          }
+        }
+      }
+    }
+  }
+
+  @include breakpoint("min", "md") {
+    table.table tr td.highlight {
+      &::before {
+        @include iconLeft(-2px, 15px, 15px, "check.png");
+      }
+    }
+  }
+
+  // add white icon for text align
+  .highlightTable {
+    tr {
+      td {
+        &:first-child::before {
+          content: "";
+          display: inline-block;
+          margin-right: 5px;
+          width: 24px;
+          height: 1px;
+        }
+        @include breakpoint("min", "md") {
+          &:not(:first-child)::before {
+            content: "";
+            display: inline-block;
+            margin-right: 5px;
+            width: 15px;
+            height: 1px;
+          }
+        }
+      }
+    }
+  }
+}

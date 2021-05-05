@@ -1,0 +1,57 @@
+$cardPalette: (
+  borderColor: var(--borderColor),
+  borderStyle: var(--borderStyle) 1px solid,
+  headerBackgroundColor: var(--headerBackgroundColor),
+  titleColor: var(--titleColor),
+  bodyColor: var(--bodyColor),
+);
+
+#card {
+  $borderColor: map-get(
+    $map: $cardPalette,
+    $key: borderColor,
+  );
+  $borderStyle: map-get(
+    $map: $cardPalette,
+    $key: borderStyle,
+  );
+  $headerBackgroundColor: map-get(
+    $map: $cardPalette,
+    $key: headerBackgroundColor,
+  );
+  $titleColor: map-get(
+    $map: $cardPalette,
+    $key: titleColor,
+  );
+  $bodyColor: map-get(
+    $map: $cardPalette,
+    $key: bodyColor,
+  );
+
+  .card {
+    margin-bottom: 32px;
+  }
+  .cardTitle {
+    font-size: 14px;
+    font-weight: 600;
+    color: $titleColor;
+    background-color: $headerBackgroundColor;
+    border: $borderStyle;
+    padding: 15px 18px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+  }
+  .cardBody {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.29;
+    color: $bodyColor;
+    border-left: $borderStyle;
+    border-right: $borderStyle;
+    border-bottom: $borderStyle;
+    padding: 15px 18px;
+    background: transparent;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+  }
+}

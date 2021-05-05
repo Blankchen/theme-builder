@@ -1,0 +1,659 @@
+<app-highlight btnText="install step" [code]="install"></app-highlight>
+
+<nz-tabset>
+  <nz-tab nzTitle="Dark theme" (nzClick)="toggleTheme('dark-theme')">
+    <app-highlight btnText="theme scss" [code]="theme.dark"></app-highlight>
+  </nz-tab>
+  <nz-tab nzTitle="Light theme" (nzClick)="toggleTheme('light-theme')">
+    <app-highlight btnText="theme scss" [code]="theme.light"></app-highlight>
+  </nz-tab>
+</nz-tabset>
+
+<div class="bootstrap-app">
+  <div class="row">
+    <div class="col-12 mt-2">
+      <h1>Typography</h1>
+      <h1>h1. Bootstrap heading</h1>
+      <h2>h2. Bootstrap heading</h2>
+      <h3>h3. Bootstrap heading</h3>
+      <h4>h4. Bootstrap heading</h4>
+      <h5>h5. Bootstrap heading</h5>
+      <h6>h6. Bootstrap heading</h6>
+    </div>
+    <div class="col-12 mt-2">
+      <h1>Images</h1>
+      <img src="https://picsum.photos/200/200" class="img-thumbnail" />
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <h1>Tables</h1>
+    </div>
+    <div class="col-6">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-6">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12 mt-2">
+      <h1>Badges</h1>
+      <span class="badge badge-primary">Primary</span>
+      <span class="badge badge-secondary">Secondary</span>
+      <span class="badge badge-success">Success</span>
+      <span class="badge badge-danger">Danger</span>
+      <span class="badge badge-warning">Warning</span>
+      <span class="badge badge-info">Info</span>
+      <span class="badge badge-light">Light</span>
+      <span class="badge badge-dark">Dark</span>
+    </div>
+    <div class="col-12 mt-2">
+      <h1>Breadcrumbs</h1>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item active" aria-current="page">Home</li>
+        </ol>
+      </nav>
+
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Library</li>
+        </ol>
+      </nav>
+
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
+          <li class="breadcrumb-item"><a href="javascript:void(0)">Library</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Data</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <h1>Buttons</h1>
+    </div>
+    <div class="col-12 mt-2">
+      <button type="button" class="btn btn-primary">Primary</button>
+      <button type="button" class="btn btn-secondary">Secondary</button>
+      <button type="button" class="btn btn-success">Success</button>
+      <button type="button" class="btn btn-danger">Danger</button>
+      <button type="button" class="btn btn-warning">Warning</button>
+      <button type="button" class="btn btn-info">Info</button>
+      <button type="button" class="btn btn-light">Light</button>
+      <button type="button" class="btn btn-dark">Dark</button>
+      <button type="button" class="btn btn-link">Link</button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <h1>Dropdowns</h1>
+    </div>
+    <div class="col-12 mt-2">
+      <div class="btn-group">
+        <button
+          type="button"
+          class="btn btn-primary dropdown-toggle"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          Action
+        </button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="javascript:void(0)">Action</a>
+          <a class="dropdown-item" href="javascript:void(0)">Another action</a>
+          <a class="dropdown-item" href="javascript:void(0)">Something else here</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="javascript:void(0)">Separated link</a>
+        </div>
+      </div>
+      <div class="btn-group">
+        <button
+          type="button"
+          class="btn btn-secondary dropdown-toggle"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          Action
+        </button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="javascript:void(0)">Action</a>
+          <a class="dropdown-item" href="javascript:void(0)">Another action</a>
+          <a class="dropdown-item" href="javascript:void(0)">Something else here</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="javascript:void(0)">Separated link</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <h1>Forms</h1>
+    </div>
+    <div class="col-12 mt-2">
+      <form class="was-validated">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input
+            type="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+          />
+          <small id="emailHelp" class="form-text text-muted"
+            >We'll never share your email with anyone else.</small
+          >
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="exampleInputPassword1"
+          />
+        </div>
+        <div class="form-group form-check">
+          <div class="custom-control custom-checkbox">
+            <input
+              type="checkbox"
+              class="custom-control-input"
+              id="customCheck1"
+            />
+            <label class="custom-control-label" for="customCheck1"
+              >Check this custom checkbox</label
+            >
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="custom-control custom-radio">
+            <input
+              type="radio"
+              id="customRadio1"
+              name="customRadio"
+              class="custom-control-input"
+            />
+            <label class="custom-control-label" for="customRadio1"
+              >Toggle this custom radio</label
+            >
+          </div>
+          <div class="custom-control custom-radio">
+            <input
+              type="radio"
+              id="customRadio2"
+              name="customRadio"
+              class="custom-control-input"
+            />
+            <label class="custom-control-label" for="customRadio2"
+              >Or toggle this other custom radio</label
+            >
+          </div>
+        </div>
+        <div class="form-group">
+          <select class="custom-select">
+            <option selected>Open this select menu</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Readonly</label>
+          <input
+            class="form-control"
+            type="text"
+            placeholder="Readonly input here..."
+            readonly
+          />
+        </div>
+        <div class="form-group">
+          <label>Disabled</label>
+          <input
+            class="form-control"
+            type="text"
+            placeholder="Disabled input here..."
+            disabled
+          />
+        </div>
+        <div class="form-group">
+          <label for="validationServer03">City</label>
+          <input
+            type="text"
+            class="form-control is-invalid"
+            id="validationServer03"
+            aria-describedby="validationServer03Feedback"
+            required
+          />
+          <div id="validationServer03Feedback" class="invalid-feedback">
+            Please provide a valid city.
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="validationServer05">Zip</label>
+          <input
+            type="text"
+            class="form-control is-invalid"
+            id="validationServer05"
+            aria-describedby="validationServer05Feedback"
+            required
+          />
+          <div id="validationServer05Feedback" class="invalid-feedback">
+            Please provide a valid zip.
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <h1>Input Group</h1>
+    </div>
+    <div class="col-12 mt-2">
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">@</span>
+        </div>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Username"
+          aria-label="Username"
+          aria-describedby="basic-addon1"
+        />
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <input
+              type="checkbox"
+              aria-label="Checkbox for following text input"
+            />
+          </div>
+        </div>
+        <input
+          type="text"
+          class="form-control"
+          aria-label="Text input with checkbox"
+        />
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <button
+            class="btn btn-outline-secondary"
+            type="button"
+            id="button-addon1"
+          >
+            Button
+          </button>
+        </div>
+        <input
+          type="text"
+          class="form-control"
+          placeholder=""
+          aria-label="Example text with button addon"
+          aria-describedby="button-addon1"
+        />
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <button
+            class="btn btn-outline-secondary dropdown-toggle"
+            type="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Dropdown
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="javascript:void(0)">Action</a>
+            <a class="dropdown-item" href="javascript:void(0)">Another action</a>
+            <a class="dropdown-item" href="javascript:void(0)">Something else here</a>
+            <div role="separator" class="dropdown-divider"></div>
+            <a class="dropdown-item" href="javascript:void(0)">Separated link</a>
+          </div>
+        </div>
+        <input
+          type="text"
+          class="form-control"
+          aria-label="Text input with dropdown button"
+        />
+      </div>
+      <div class="input-group mb-3">
+        <div class="custom-file">
+          <input type="file" class="custom-file-input" id="inputGroupFile02" />
+          <label
+            class="custom-file-label"
+            for="inputGroupFile02"
+            aria-describedby="inputGroupFileAddon02"
+            >Choose file</label
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <h1>Navs</h1>
+    </div>
+    <div class="col-12 mt-2">
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link active" href="javascript:void(0)">Active</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="javascript:void(0)">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="javascript:void(0)">Link</a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link disabled"
+            href="javascript:void(0)"
+            tabindex="-1"
+            aria-disabled="true"
+            >Disabled</a
+          >
+        </li>
+      </ul>
+    </div>
+    <div class="col-12">
+      <h1>Pagination</h1>
+    </div>
+    <div class="col-12 mt-2">
+      <nav aria-label="Page navigation example">
+        <ul class="pagination">
+          <li class="page-item active">
+            <a class="page-link" href="javascript:void(0)">Previous</a>
+          </li>
+          <li class="page-item"><a class="page-link" href="javascript:void(0)">1</a></li>
+          <li class="page-item"><a class="page-link" href="javascript:void(0)">2</a></li>
+          <li class="page-item"><a class="page-link" href="javascript:void(0)">3</a></li>
+          <li class="page-item disabled">
+            <a class="page-link" href="javascript:void(0)">Next</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <h1>Progress</h1>
+    </div>
+    <div class="col-12 mt-2">
+      <div class="progress">
+        <div
+          class="progress-bar w-75"
+          role="progressbar"
+          aria-valuenow="75"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        ></div>
+      </div>
+      <div class="progress">
+        <div
+          class="progress-bar"
+          role="progressbar"
+          style="width: 25%"
+          aria-valuenow="25"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        >
+          25%
+        </div>
+      </div>
+      <div class="progress" style="height: 1px">
+        <div
+          class="progress-bar"
+          role="progressbar"
+          style="width: 25%"
+          aria-valuenow="25"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        ></div>
+      </div>
+      <div class="progress" style="height: 20px">
+        <div
+          class="progress-bar"
+          role="progressbar"
+          style="width: 25%"
+          aria-valuenow="25"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        ></div>
+      </div>
+      <div class="progress">
+        <div
+          class="progress-bar bg-success"
+          role="progressbar"
+          style="width: 25%"
+          aria-valuenow="25"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        ></div>
+      </div>
+      <div class="progress">
+        <div
+          class="progress-bar bg-info"
+          role="progressbar"
+          style="width: 50%"
+          aria-valuenow="50"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        ></div>
+      </div>
+      <div class="progress">
+        <div
+          class="progress-bar bg-warning"
+          role="progressbar"
+          style="width: 75%"
+          aria-valuenow="75"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        ></div>
+      </div>
+      <div class="progress">
+        <div
+          class="progress-bar bg-danger"
+          role="progressbar"
+          style="width: 100%"
+          aria-valuenow="100"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        ></div>
+      </div>
+      <div class="progress">
+        <div
+          class="progress-bar"
+          role="progressbar"
+          style="width: 15%"
+          aria-valuenow="15"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        ></div>
+        <div
+          class="progress-bar bg-success"
+          role="progressbar"
+          style="width: 30%"
+          aria-valuenow="30"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        ></div>
+        <div
+          class="progress-bar bg-info"
+          role="progressbar"
+          style="width: 20%"
+          aria-valuenow="20"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        ></div>
+      </div>
+      <div class="progress">
+        <div
+          class="progress-bar progress-bar-striped"
+          role="progressbar"
+          style="width: 10%"
+          aria-valuenow="10"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        ></div>
+      </div>
+      <div class="progress">
+        <div
+          class="progress-bar progress-bar-striped bg-success"
+          role="progressbar"
+          style="width: 25%"
+          aria-valuenow="25"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        ></div>
+      </div>
+      <div class="progress">
+        <div
+          class="progress-bar progress-bar-striped bg-info"
+          role="progressbar"
+          style="width: 50%"
+          aria-valuenow="50"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        ></div>
+      </div>
+      <div class="progress">
+        <div
+          class="progress-bar progress-bar-striped bg-warning"
+          role="progressbar"
+          style="width: 75%"
+          aria-valuenow="75"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        ></div>
+      </div>
+      <div class="progress">
+        <div
+          class="progress-bar progress-bar-striped bg-danger"
+          role="progressbar"
+          style="width: 100%"
+          aria-valuenow="100"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        ></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <h1>Tooltips</h1>
+    </div>
+    <div class="col-12 m-5 align-items-center d-flex flex-column">
+      <button
+        type="button"
+        class="btn btn-secondary"
+        data-toggle="tooltip"
+        data-placement="top"
+        title="Tooltip on top"
+      >
+        Tooltip on top
+      </button>
+      <button
+        type="button"
+        class="btn btn-secondary"
+        data-toggle="tooltip"
+        data-placement="left"
+        title="Tooltip on left"
+      >
+        Tooltip on left
+      </button>
+      <button
+        type="button"
+        class="btn btn-secondary"
+        data-toggle="tooltip"
+        data-placement="right"
+        title="Tooltip on right"
+      >
+        Tooltip on right
+      </button>
+      <button
+        type="button"
+        class="btn btn-secondary"
+        data-toggle="tooltip"
+        data-placement="bottom"
+        title="Tooltip on bottom"
+      >
+        Tooltip on bottom
+      </button>
+    </div>
+  </div>
+</div>
